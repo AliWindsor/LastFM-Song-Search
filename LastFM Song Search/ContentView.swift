@@ -6,12 +6,61 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel: TrackListViewModel
+    
+    init() {
+        viewModel = TrackListViewModel()
+        UITableView.appearance()
+            .backgroundColor = .clear
+       }
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView{
+            ZStack{
+                Color.gray.opacity(0.3)
+                    .ignoresSafeArea()
+                
+                VStack{
+                    Image("last-fm-icon")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                    
+                    Spacer()
+                        .frame(height:30)
+            
+                    SearchBar(searchTerm: $viewModel.searchTerm)
+                    
+                    if(viewModel.tracks.isEmpty){
+                       
+                    }else{
+                        List(viewModel.tracks){ track in
+                            
+                           /* NavigationLink(destination: EmptyView()){
+                            TrackView(track: track)
+                        }*/
+                            
+                            Link(destination: URL(string: (String(track.url)))!){
+                                
+                                TrackView(track: track)
+                            }
+                            
+                        }
+                    
+                    }
+  
+                }
+                
+            }
+            .navigationTitle("")
+            .navigationBarHidden(true)
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

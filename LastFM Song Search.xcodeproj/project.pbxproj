@@ -7,19 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362C5071265B927B000AAD33 /* TrackDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5070265B927B000AAD33 /* TrackDetail.swift */; };
+		362C5073265B9454000AAD33 /* TrackImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5072265B9454000AAD33 /* TrackImageLoader.swift */; };
+		362C5076265E5B6E000AAD33 /* TrackImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5075265E5B6D000AAD33 /* TrackImageView.swift */; };
 		36A99E882659A3520038FA22 /* LastFM_Song_SearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99E872659A3520038FA22 /* LastFM_Song_SearchApp.swift */; };
 		36A99E8A2659A3520038FA22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99E892659A3520038FA22 /* ContentView.swift */; };
 		36A99E8C2659A3580038FA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A99E8B2659A3580038FA22 /* Assets.xcassets */; };
 		36A99E8F2659A3580038FA22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A99E8E2659A3580038FA22 /* Preview Assets.xcassets */; };
+		36A99E982659A38E0038FA22 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99E972659A38E0038FA22 /* SearchBar.swift */; };
+		36A99EA82659A43F0038FA22 /* TrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99EA42659A43F0038FA22 /* TrackDetailsViewModel.swift */; };
+		36A99EA92659A43F0038FA22 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99EA52659A43F0038FA22 /* TrackListViewModel.swift */; };
+		36A99EAA2659A43F0038FA22 /* TrackSearchModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99EA62659A43F0038FA22 /* TrackSearchModelData.swift */; };
+		36A99EAB2659A43F0038FA22 /* TrackDetailsModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99EA72659A43F0038FA22 /* TrackDetailsModelData.swift */; };
+		36A99EAD2659C3DD0038FA22 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99EAC2659C3DD0038FA22 /* TrackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		362C5070265B927B000AAD33 /* TrackDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetail.swift; sourceTree = "<group>"; };
+		362C5072265B9454000AAD33 /* TrackImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageLoader.swift; sourceTree = "<group>"; };
+		362C5074265E4ACD000AAD33 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		362C5075265E5B6D000AAD33 /* TrackImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageView.swift; sourceTree = "<group>"; };
 		36A99E842659A3520038FA22 /* LastFM Song Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LastFM Song Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A99E872659A3520038FA22 /* LastFM_Song_SearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFM_Song_SearchApp.swift; sourceTree = "<group>"; };
 		36A99E892659A3520038FA22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36A99E8B2659A3580038FA22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A99E8E2659A3580038FA22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36A99E902659A3580038FA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A99E972659A38E0038FA22 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		36A99EA42659A43F0038FA22 /* TrackDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewModel.swift; sourceTree = "<group>"; };
+		36A99EA52659A43F0038FA22 /* TrackListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		36A99EA62659A43F0038FA22 /* TrackSearchModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackSearchModelData.swift; sourceTree = "<group>"; };
+		36A99EA72659A43F0038FA22 /* TrackDetailsModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailsModelData.swift; sourceTree = "<group>"; };
+		36A99EAC2659C3DD0038FA22 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,7 @@
 		36A99E7B2659A3520038FA22 = {
 			isa = PBXGroup;
 			children = (
+				362C5074265E4ACD000AAD33 /* ReadMe.txt */,
 				36A99E862659A3520038FA22 /* LastFM Song Search */,
 				36A99E852659A3520038FA22 /* Products */,
 			);
@@ -54,6 +74,8 @@
 			children = (
 				36A99E872659A3520038FA22 /* LastFM_Song_SearchApp.swift */,
 				36A99E892659A3520038FA22 /* ContentView.swift */,
+				36A99E962659A38E0038FA22 /* Views */,
+				36A99EA32659A43F0038FA22 /* ModelData */,
 				36A99E8B2659A3580038FA22 /* Assets.xcassets */,
 				36A99E902659A3580038FA22 /* Info.plist */,
 				36A99E8D2659A3580038FA22 /* Preview Content */,
@@ -67,6 +89,29 @@
 				36A99E8E2659A3580038FA22 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36A99E962659A38E0038FA22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36A99E972659A38E0038FA22 /* SearchBar.swift */,
+				36A99EAC2659C3DD0038FA22 /* TrackView.swift */,
+				362C5070265B927B000AAD33 /* TrackDetail.swift */,
+				362C5075265E5B6D000AAD33 /* TrackImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36A99EA32659A43F0038FA22 /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				36A99EA62659A43F0038FA22 /* TrackSearchModelData.swift */,
+				36A99EA52659A43F0038FA22 /* TrackListViewModel.swift */,
+				36A99EA72659A43F0038FA22 /* TrackDetailsModelData.swift */,
+				36A99EA42659A43F0038FA22 /* TrackDetailsViewModel.swift */,
+				362C5072265B9454000AAD33 /* TrackImageLoader.swift */,
+			);
+			path = ModelData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +184,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A99E8A2659A3520038FA22 /* ContentView.swift in Sources */,
+				36A99EA82659A43F0038FA22 /* TrackDetailsViewModel.swift in Sources */,
+				362C5073265B9454000AAD33 /* TrackImageLoader.swift in Sources */,
+				36A99EAB2659A43F0038FA22 /* TrackDetailsModelData.swift in Sources */,
+				362C5076265E5B6E000AAD33 /* TrackImageView.swift in Sources */,
 				36A99E882659A3520038FA22 /* LastFM_Song_SearchApp.swift in Sources */,
+				36A99EAA2659A43F0038FA22 /* TrackSearchModelData.swift in Sources */,
+				36A99EA92659A43F0038FA22 /* TrackListViewModel.swift in Sources */,
+				36A99EAD2659C3DD0038FA22 /* TrackView.swift in Sources */,
+				36A99E982659A38E0038FA22 /* SearchBar.swift in Sources */,
+				362C5071265B927B000AAD33 /* TrackDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
