@@ -12,9 +12,9 @@ import SwiftUI
 
 class TrackDetailModelData {
     
-    private let someView : TrackView
+    private let someView : TrackSearchViewModel
     
-    init(someView: TrackView){
+    init(someView: TrackSearchViewModel){
         self.someView = someView
     }
     
@@ -51,7 +51,7 @@ class TrackDetailModelData {
         let queryItems = [
             URLQueryItem(name: "method", value: "track.getInfo"),
             URLQueryItem(name: "track", value: searchTerm),
-            URLQueryItem(name: "artist", value: someView.track.artist), //use search term and track artist toget detailed information from the specific json as it takes two parameters
+            URLQueryItem(name: "artist", value: someView.artist), //use search term and track artist toget detailed information from the specific json as it takes two parameters
             URLQueryItem(name: "api_key", value: "d527fc1829aecc7e54b63367b3d4621a"),
             URLQueryItem(name: "format", value: "json")
         ]

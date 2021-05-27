@@ -12,8 +12,10 @@ import Combine
 class TrackListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published public var tracks: [TrackSearchViewModel] = []
+    @Published public var details: [TrackDetailViewModel] = []
     
     private let dataModel: TrackSearchModelData = TrackSearchModelData()
+    private let detailDataModel: TrackDetailModelData = TrackDetailModelData()
     private let imageLoader: TrackImageLoader = TrackImageLoader()
     private var disposables = Set<AnyCancellable>()
     
@@ -29,6 +31,15 @@ class TrackListViewModel: ObservableObject {
         
         dataModel.loadTracks(searchTerm: searchTerm) { tracks in
             tracks.forEach{ self.appendTrack(track: $0) }
+        }
+        
+        detailDataModel.loadTrackInfo(searchTerm: searchTerm){ tracks in
+            let detailVM = TrackDetailViewModel(dtl: tracks)
+            
+            DispatchQueue.main.async {
+                self.details.append(detailVM)
+            }
+            
         }
     }
     
@@ -46,6 +57,8 @@ class TrackListViewModel: ObservableObject {
             
         }
     }
+    
+    //private func append
     
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 struct TrackDetail: View {
     //takes tracksearch and trackdetail
     
-    @ObservedObject var track: TrackInfoViewModel
+    @ObservedObject var track: TrackDetailViewModel
     
     var body: some View {
         VStack(alignment: .leading) {

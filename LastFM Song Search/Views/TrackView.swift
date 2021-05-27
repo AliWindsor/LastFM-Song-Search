@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TrackView: View {
-    @ObservedObject var track: TrackSearchViewModel
+
+@ObservedObject var track: TrackSearchViewModel
     
   var body: some View {
     

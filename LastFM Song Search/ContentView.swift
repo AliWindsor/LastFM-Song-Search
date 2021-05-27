@@ -14,6 +14,7 @@ struct ContentView: View {
     
     init() {
         viewModel = TrackListViewModel()
+        
         UITableView.appearance()
             .backgroundColor = .clear
        }
@@ -40,14 +41,14 @@ struct ContentView: View {
                     }else{
                         List(viewModel.tracks){ track in
                             
-                           /* NavigationLink(destination: EmptyView()){
+                           NavigationLink(destination: EmptyView()){
                             TrackView(track: track)
-                        }*/
+                        }
                             
-                            Link(destination: URL(string: (String(track.url)))!){
+                           /* Link(destination: URL(string: (String(track.url)))!){
                                 
                                 TrackView(track: track)
-                            }
+                            }*/
                             
                         }
                     

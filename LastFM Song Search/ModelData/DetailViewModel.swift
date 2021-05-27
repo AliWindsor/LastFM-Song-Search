@@ -13,16 +13,16 @@ class TrackInfoListViewModel: ObservableObject{
     
 }
 
-class TrackInfoViewModel: Identifiable, ObservableObject{
+class TrackDetailViewModel: Identifiable, ObservableObject{
 
     let album: String
     let released: String
     let summary: String
     
-    init(response: SongInfoResponse){
-        album = response.info.album.albumName
-        released = response.info.summary.releaseDate
-        summary = response.info.summary.detailSummary
+    init(dtl: TrackInfo){
+        album = dtl.album.albumName
+        released = dtl.summary.releaseDate
+        summary = dtl.summary.detailSummary
     }
     
 }
