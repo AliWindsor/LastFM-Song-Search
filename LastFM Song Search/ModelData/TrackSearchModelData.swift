@@ -35,13 +35,8 @@ class TrackSearchModelData {
         dataTask?.resume()
     }
     
-    
-    
-    
    private func buildUrl(forTerm searchTerm: String) -> URL?{
         guard !searchTerm.isEmpty else {return nil}
-        
-        //var searchURL = "http://ws.audioscrobbler.com/2.0/?method=track.search&track=\(searchTerm)&api_key=d527fc1829aecc7e54b63367b3d4621a&format=json"
         
         let queryItems = [
             URLQueryItem(name: "method", value: "track.search"),
@@ -53,18 +48,13 @@ class TrackSearchModelData {
         var components = URLComponents(string: "https://ws.audioscrobbler.com/2.0/")
         components?.queryItems = queryItems
  
-        //return URL(string: searchURL)
         return components?.url
     }
-    
-   // print(buildUrl(forTerm: "Hi"))
-
 }
-
 
 //Find Song
 
-struct SongResponse: Decodable{
+struct SongResponse: Codable{
     let songs : TrackResults
     
     enum CodingKeys: String, CodingKey {
@@ -72,7 +62,7 @@ struct SongResponse: Decodable{
     }
 }
 
-struct TrackResults: Decodable {
+struct TrackResults: Codable {
     var trackMatches: TrackMatches
    
     enum CodingKeys: String, CodingKey {
@@ -80,7 +70,7 @@ struct TrackResults: Decodable {
     }
 }
 
-struct TrackMatches: Decodable {
+struct TrackMatches: Codable {
     let matches : [Tracks]
     
     enum CodingKeys: String, CodingKey {
@@ -88,7 +78,7 @@ struct TrackMatches: Decodable {
     }
 }
 
-struct Tracks: Decodable {
+struct Tracks: Codable {
      let songName: String
      let singerName: String
      let trackUrl: String
@@ -100,15 +90,15 @@ struct Tracks: Decodable {
         case trackUrl = "url"
         case albumImage = "image"
     }
+}
+
+struct TrackImage: Codable{
+    let url: String
+    let size: String
     
-    struct TrackImage: Decodable{
-        let url: String
-        let size: String
-        
-        enum CodingKeys: String, CodingKey{
-            case url = "#text"
-            case size
-        }
+    enum CodingKeys: String, CodingKey{
+        case url = "#text"
+        case size
     }
 }
 

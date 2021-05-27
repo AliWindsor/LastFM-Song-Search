@@ -3,7 +3,7 @@
 //  LastFM Song Search
 //
 //  Created by Alicia Windsor on 26/05/2021.
-//
+//  Updated: 27/05/2021
 
 For this project I attempted to use a traditional MVVM architecture as I will be using SwiftUI for this project and I find this architecture is relatively straight forward to implement.
 
@@ -13,6 +13,6 @@ For this project I attempted to use a traditional MVVM architecture as I will be
   
   Admittedly I struggled with figuring out the best method for decoding this JSON file as most JSON files I knew how to work with were stored as an array, but as this one wasnt, as such it confused me and I was unsure as to how to correctly call the load function for this. As I reached a sort of stagnant point with trying to figure it out, I decided to just have a webpage with the track's information open when the track was selected instead, so as to atleast fulfill that part of the criteria.
   
-  The final part I struggled with was loading each track's image as I am not entirely sure why my image loader was not rendering the image.
+  The final part I struggled with was loading each track's image as I am not entirely sure why my image loader was not rendering the image. ***NOTE: The image loader IS loading the image, the URL is broken therefore there is no image stored in the URL, (see: https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png for an example).****
 
 This project was extremely interesting for me to undertake as I only had previous experience loading locally stored JSON files, learning how to read JSON files from APIs was quite challenging but i have definately learnt a lot from it, I will most likely spend the following days researching and looking at more documentation to get a better understanding of the issues I had as well as hopefully be able fully implement everything correctly as a personal project.
