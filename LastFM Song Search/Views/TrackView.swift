@@ -5,6 +5,7 @@
 //  Created by Alicia Windsor on 22/05/2021.
 //
 
+//how the tracks will appear in the list
 import SwiftUI
 
 struct TrackView: View {

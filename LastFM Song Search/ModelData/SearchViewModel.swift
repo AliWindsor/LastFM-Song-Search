@@ -13,9 +13,6 @@ class TrackListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published public var tracks: [TrackSearchViewModel] = []
     
-    @Published public var details: [TrackDetailViewModel] = []
-    private let detailDataModel: TrackDetailModelData = TrackDetailModelData()
-    
     private let dataModel: TrackSearchModelData = TrackSearchModelData()
     private let imageLoader: TrackImageLoader = TrackImageLoader()
     
@@ -31,12 +28,10 @@ class TrackListViewModel: ObservableObject {
         
         tracks.removeAll()
         imageLoader.reset()
-        //details.removeAll()
         
         dataModel.loadTracks(searchTerm: searchTerm) { tracks in
             tracks.forEach{ self.appendTrack(track: $0) }
         }
-        
         
     }
     
@@ -51,9 +46,7 @@ class TrackListViewModel: ObservableObject {
             DispatchQueue.main.async {
               trackViewModel.image = image
         }
-            
-        
-       
+
         }
     }
     

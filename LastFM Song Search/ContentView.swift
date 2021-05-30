@@ -41,15 +41,11 @@ struct ContentView: View {
                     }else{
                         List(viewModel.tracks){ track in
                             
-                            /*NavigationLink(destination: EmptyView()){//TrackDetail(track: viewModel.details[0])){
+                            NavigationLink(destination: WebView(url: track.url)){
+                                
                             TrackView(track: track)
                             
-                        }*/
-                            
-                            Link(destination: URL(string: (String(track.url)))!){
-                                
-                                TrackView(track: track)
-                            }
+                        }
                             
                         }
                     
@@ -58,7 +54,7 @@ struct ContentView: View {
                 }
                 
             }
-            .navigationTitle("")
+            .navigationTitle("Song List")
             .navigationBarHidden(true)
         }
     }

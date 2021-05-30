@@ -10,6 +10,7 @@
 		362C5071265B927B000AAD33 /* TrackDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5070265B927B000AAD33 /* TrackDetail.swift */; };
 		362C5073265B9454000AAD33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5072265B9454000AAD33 /* ImageLoader.swift */; };
 		362C5076265E5B6E000AAD33 /* TrackImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C5075265E5B6D000AAD33 /* TrackImageView.swift */; };
+		362C509526644270000AAD33 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362C509426644270000AAD33 /* WebView.swift */; };
 		36A99E882659A3520038FA22 /* LastFM_Song_SearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99E872659A3520038FA22 /* LastFM_Song_SearchApp.swift */; };
 		36A99E8A2659A3520038FA22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A99E892659A3520038FA22 /* ContentView.swift */; };
 		36A99E8C2659A3580038FA22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A99E8B2659A3580038FA22 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		362C5072265B9454000AAD33 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		362C5074265E4ACD000AAD33 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		362C5075265E5B6D000AAD33 /* TrackImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackImageView.swift; sourceTree = "<group>"; };
+		362C509426644270000AAD33 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		36A99E842659A3520038FA22 /* LastFM Song Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LastFM Song Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A99E872659A3520038FA22 /* LastFM_Song_SearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFM_Song_SearchApp.swift; sourceTree = "<group>"; };
 		36A99E892659A3520038FA22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				36A99EAC2659C3DD0038FA22 /* TrackView.swift */,
 				362C5070265B927B000AAD33 /* TrackDetail.swift */,
 				362C5075265E5B6D000AAD33 /* TrackImageView.swift */,
+				362C509426644270000AAD33 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				36A99EAA2659A43F0038FA22 /* SearchModelData.swift in Sources */,
 				36A99EA92659A43F0038FA22 /* SearchViewModel.swift in Sources */,
 				36A99EAD2659C3DD0038FA22 /* TrackView.swift in Sources */,
+				362C509526644270000AAD33 /* WebView.swift in Sources */,
 				36A99E982659A38E0038FA22 /* SearchBar.swift in Sources */,
 				362C5071265B927B000AAD33 /* TrackDetail.swift in Sources */,
 			);

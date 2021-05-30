@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TrackDetail: View {
-    //takes tracksearch and trackdetail
     
     @ObservedObject var track: TrackDetailViewModel
     
