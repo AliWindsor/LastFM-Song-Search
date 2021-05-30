@@ -41,14 +41,15 @@ struct ContentView: View {
                     }else{
                         List(viewModel.tracks){ track in
                             
-                           NavigationLink(destination: EmptyView()){
+                            /*NavigationLink(destination: EmptyView()){//TrackDetail(track: viewModel.details[0])){
                             TrackView(track: track)
-                        }
                             
-                           /* Link(destination: URL(string: (String(track.url)))!){
+                        }*/
+                            
+                            Link(destination: URL(string: (String(track.url)))!){
                                 
                                 TrackView(track: track)
-                            }*/
+                            }
                             
                         }
                     

@@ -11,28 +11,24 @@ import Foundation
 import SwiftUI
 
 class TrackDetailModelData {
-    
-    private let someView : TrackSearchViewModel
-    
-    init(someView: TrackSearchViewModel){
-        self.someView = someView
-    }
-    
+
     private var infoDataTask: URLSessionDataTask?
     
-    public func loadTrackInfo(searchTerm: String, completion: @escaping((TrackInfo) -> Void)){
+    public func loadTrackInfo(title: String, artist: String, completion: @escaping((TrackInfo) -> Void)){
         
         infoDataTask?.cancel()
         
-        let url = buildUrl(forTerm: searchTerm)
+        guard let url = buildUrl(title: title, artist: artist)else{
+            return
+        }
         
-        
-        infoDataTask = URLSession.shared.dataTask(with: url!){ data, _, _ in
+        infoDataTask = URLSession.shared.dataTask(with: url){ data, _, _ in
             if let data = data{
             
                 do{
                     let songResponse = try JSONDecoder().decode(SongInfoResponse.self, from: data)
-                       completion(songResponse.info)
+                       completion(songResponse.track)
+                        print(songResponse.track.album)
                     
                 }catch{print(error)}
                 return
@@ -41,17 +37,15 @@ class TrackDetailModelData {
         infoDataTask?.resume()
     }
     
-    public func loadInfo(){
-        
-    }
-    
-   private func buildUrl(forTerm searchTerm: String) -> URL?{
-        guard !searchTerm.isEmpty else {return nil}
+    private func buildUrl(title songTitle: String, artist songArtist: String) -> URL?{
+        guard !songTitle.isEmpty || !songArtist.isEmpty else {
+            return nil
+        }
     
         let queryItems = [
             URLQueryItem(name: "method", value: "track.getInfo"),
-            URLQueryItem(name: "track", value: searchTerm),
-            URLQueryItem(name: "artist", value: someView.artist), //use search term and track artist toget detailed information from the specific json as it takes two parameters
+            URLQueryItem(name: "track", value: "hello"), //songTitle),
+            URLQueryItem(name: "artist", value: "adele"), // songArtist),
             URLQueryItem(name: "api_key", value: "d527fc1829aecc7e54b63367b3d4621a"),
             URLQueryItem(name: "format", value: "json")
         ]
@@ -63,14 +57,23 @@ class TrackDetailModelData {
     }
 }
 
-//Details
+//Song Details
 struct SongInfoResponse: Codable{
-    let info: TrackInfo
+    let track: TrackInfo
+    
+    enum CodingKeys: String, CodingKey {
+        case track
+    }
 }
 
 struct TrackInfo: Codable {
     let album: AlbumData
     let summary: WikiData
+    
+    enum CodingKeys: String, CodingKey {
+        case album = "album"
+        case summary = "wiki"
+    }
 }
 
 struct AlbumData: Codable {

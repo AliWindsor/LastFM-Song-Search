@@ -12,11 +12,13 @@ import Combine
 class TrackListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
     @Published public var tracks: [TrackSearchViewModel] = []
+    
     @Published public var details: [TrackDetailViewModel] = []
+    private let detailDataModel: TrackDetailModelData = TrackDetailModelData()
     
     private let dataModel: TrackSearchModelData = TrackSearchModelData()
-    private let detailDataModel: TrackDetailModelData = TrackDetailModelData()
     private let imageLoader: TrackImageLoader = TrackImageLoader()
+    
     private var disposables = Set<AnyCancellable>()
     
     init(){
@@ -26,21 +28,16 @@ class TrackListViewModel: ObservableObject {
     }
 
     private func loadAllTracks(searchTerm: String){
+        
         tracks.removeAll()
         imageLoader.reset()
+        //details.removeAll()
         
         dataModel.loadTracks(searchTerm: searchTerm) { tracks in
             tracks.forEach{ self.appendTrack(track: $0) }
         }
         
-        detailDataModel.loadTrackInfo(searchTerm: searchTerm){ tracks in
-            let detailVM = TrackDetailViewModel(dtl: tracks)
-            
-            DispatchQueue.main.async {
-                self.details.append(detailVM)
-            }
-            
-        }
+        
     }
     
     private func appendTrack(track: Tracks){
@@ -55,16 +52,16 @@ class TrackListViewModel: ObservableObject {
               trackViewModel.image = image
         }
             
+        
+       
         }
     }
-    
-    //private func append
     
 }
 
 class TrackSearchViewModel: Identifiable, ObservableObject{
     let title: String
-    var artist: String
+    let artist: String
     let url: String
     @Published var image: Image?
     

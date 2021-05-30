@@ -17,7 +17,7 @@ struct SearchBar: UIViewRepresentable {
         let searchBar = UISearchBar(frame: .zero)
             searchBar.delegate = context.coordinator
             searchBar.searchBarStyle = .minimal
-            searchBar.placeholder = "Search"
+            searchBar.placeholder = "Search for a song or singer"
             searchBar.searchTextField.backgroundColor = .white
             searchBar.searchTextField.layer.cornerRadius = 18
             searchBar.searchTextField.clipsToBounds = true

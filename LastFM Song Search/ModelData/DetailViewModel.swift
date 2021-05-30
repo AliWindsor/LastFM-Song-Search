@@ -8,13 +8,17 @@
 import Foundation
 import Combine
 
-class TrackInfoListViewModel: ObservableObject{
-    //Use loader here
+class TrackDetailListViewModel: ObservableObject{
+    var songTitle: String = " "
+    var songArtist: String = " "
     
+    //@Published public var details: [TrackDetailViewModel] = detailDataModel.loadTrackInfo(title: songTitle, artist: songArtist)
+    
+    private let detailDataModel: TrackDetailModelData = TrackDetailModelData()
+
 }
 
 class TrackDetailViewModel: Identifiable, ObservableObject{
-
     let album: String
     let released: String
     let summary: String
